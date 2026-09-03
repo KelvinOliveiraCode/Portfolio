@@ -42,7 +42,7 @@ body{
   position:fixed;inset:0;z-index:-2;overflow:hidden;
   background:var(--bg);
 }
-#plate img{
+#plate img,#plate video{
   position:absolute;top:50%;left:50%;
   width:auto;height:auto;min-width:100%;min-height:100%;
   transform:translate(-50%,-50%);
@@ -232,7 +232,7 @@ footer ul a:hover{color:var(--white)}
 <body>
 
 <div id="plate" aria-hidden="true">
-  <img src="assets/engraving-plate.jpg" alt="">
+  <video src="assets/gravura-ascii.mp4" poster="assets/gravura-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
 </div>
 <canvas id="fractal-bg" aria-hidden="true"></canvas>
 

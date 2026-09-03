@@ -89,7 +89,7 @@
 
       var plate = document.getElementById('plate');
       if (plate) {
-        var im = plate.querySelector('img');
+        var im = plate.querySelector('video, img');
         var el = im || plate;
         el.style.transform = 'translate(-50%,-50%) perspective(1200px) rotateX(' + crx.toFixed(3) + 'deg) rotateY(' + cry.toFixed(3) + 'deg) scale(1.06)';
       }
@@ -115,7 +115,9 @@
     kick();
   }
 
-  /* ---- background video removed; plate is now the still image ---- */
+  /* ---- plate: ASCII engraving video loops behind the page ---- */
+  var plateVideo = document.querySelector('#plate video');
+  if (plateVideo && reduce) { plateVideo.removeAttribute('autoplay'); plateVideo.pause(); }
 
   /* ---- gold word in h1: slow celestial breathing ---- */
   if (!reduce) {
