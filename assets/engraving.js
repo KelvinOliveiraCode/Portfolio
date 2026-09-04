@@ -117,7 +117,29 @@
 
   /* ---- plate: ASCII engraving video loops behind the page ---- */
   var plateVideo = document.querySelector('#plate video');
-  if (plateVideo && reduce) { plateVideo.removeAttribute('autoplay'); plateVideo.pause(); }
+  if (plateVideo) {
+    if (reduce) {
+      plateVideo.removeAttribute('autoplay');
+      plateVideo.pause();
+    } else {
+      /* iOS exige a propriedade muted, não só o atributo */
+      plateVideo.muted = true;
+      var tentaPlay = function () {
+        var p = plateVideo.play();
+        if (p && p.catch) p.catch(function () { /* autoplay bloqueado; cai no gesto abaixo */ });
+      };
+      tentaPlay();
+      /* modo baixo consumo (iOS) / economia de dados (Android) bloqueiam autoplay:
+         toca no primeiro toque ou scroll */
+      var gesto = function () {
+        tentaPlay();
+        document.removeEventListener('touchstart', gesto);
+        document.removeEventListener('scroll', gesto);
+      };
+      document.addEventListener('touchstart', gesto, { passive: true });
+      document.addEventListener('scroll', gesto, { passive: true });
+    }
+  }
 
   /* ---- gold word in h1: slow celestial breathing ---- */
   if (!reduce) {
