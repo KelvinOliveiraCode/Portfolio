@@ -44,7 +44,7 @@ Portfólio pessoal de **Kelvin Oliveira** — pipelines de dados, ML e produtos 
 
 ### Autor
 
-**Kelvin Oliveira** — Ananindeua, PA · [GitHub](https://github.com/KelvinOliveiraCode) · [LinkedIn](https://www.linkedin.com/in/kelvin-oliveira-0282033b4/)
+**Kelvin Oliveira** — Ananindeua, PA · [GitHub](https://github.com/KelvinOliveiraCode) · [LinkedIn](https://www.linkedin.com/in/kelvin-oliveira-code/)
 
 ---
 
@@ -78,4 +78,4 @@ Personal portfolio for **Kelvin Oliveira** — data pipelines, ML and digital pr
 
 ### Author
 
-**Kelvin Oliveira** — Ananindeua, PA, Brazil · [GitHub](https://github.com/KelvinOliveiraCode) · [LinkedIn](https://www.linkedin.com/in/kelvin-oliveira-0282033b4/)
+**Kelvin Oliveira** — Ananindeua, PA, Brazil · [GitHub](https://github.com/KelvinOliveiraCode) · [LinkedIn](https://www.linkedin.com/in/kelvin-oliveira-code/)
